@@ -1,13 +1,24 @@
-from flask import Flask,render_template,request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/",methods=['POST','GET'])
+@app.route("/", methods=['GET', 'POST'])
+def calculate():
+    age = ''
+    bmi = ''
+    children = ''
+    smoking = ''
+    insurance = ''
 
-def Calculate():
-    bmi=''
-    if request.method=='POST' and 'weight' in request.form and 'height' in request.form:
-        Weight=float(request.form.get('weight'))
-        Height=float(request.form.get('height'))
-        bmi=round((Weight/(Height/100)**2),2)
-    return render_template("index.html",bmi=bmi)
+    if request.method == 'POST' and 'age' in request.form and 'bmi' in request.form:
+        age = request.form.get('age')
+        bmi = request.form.get('bmi')
+        children = request.form.get('children')
+        smoking = request.form.get('smoking')
+
+        insurance = 8167.9  + (3194.18 * float(age)) + (1086.33 * float(bmi)) + (311.49 * int(children)) + (25050 * int(smoking))
+
+    return render_template("index.html", age=age, bmi=bmi, children=children, smoking=smoking, insurance=insurance)
+
+if __name__ == '__main__':
+    app.run(debug=True)
