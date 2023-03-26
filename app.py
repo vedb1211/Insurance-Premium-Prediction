@@ -16,9 +16,10 @@ def calculate():
         children = request.form.get('children')
         smoking = request.form.get('smoking')
 
-        insurance = 8167.9  + (3194.18 * float(age)) + (1086.33 * float(bmi)) + (311.49 * int(children)) + (25050 * int(smoking))
+        insurance = round(8167.9  + (3194.18 * float(age)) + (1086.33 * float(bmi)) + (311.49 * int(children)) + (25050 * int(smoking)),2)
 
     return render_template("index.html", age=age, bmi=bmi, children=children, smoking=smoking, insurance=insurance)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
