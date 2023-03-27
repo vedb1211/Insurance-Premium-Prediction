@@ -66,17 +66,20 @@
 <body>
 	<h1>Insurance Premium Predictor</h1>
 	<form method="POST" action="/">
-		<label for="age">Age:</label>
+		<label for="age">Your Age:</label>
 		<input type="text" id="age" name="age" value="{{ age }}">
 	
-		<label for="bmi">BMI:</label>
+		<label for="bmi">Your BMI:</label>
 		<input type="text" id="bmi" name="bmi" value="{{ bmi }}">
 
-		<label for="children">Children:</label>
+		<label for="children">How many Children do you have:</label>
 		<input type="text" id="children" name="children" value="{{ children }}">
 	
-		<label for="smoking">Smoking (1/0):</label>
+		<label for="smoking">Do you Smoke:</label>
 		<input type="text" id="smoking" name="smoking" value="{{ smoking }}">
+
+		<label for="gender">Your Gender:</label>
+		<input type="text" id="gender" name="gender" value="{{ gender }}">
 	
 		<input type="submit" value="Predict">
 	</form>
