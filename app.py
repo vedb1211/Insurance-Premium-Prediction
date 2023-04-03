@@ -30,7 +30,7 @@ def calculate():
             gender_male=0
             gender_female=1
 
-        insurance = round(5633.51+(3715.28*int(age))+(1999.61*int(bmi))+(651.17*int(children))+(23530*int(smoking_yes)+2616.04*int(gender_male)+3017.46*int(gender_female)),2)
+        insurance = round(5633.51+(3715.28*float(age))+(1999.61*float(bmi))+(651.17*int(children))+(23530*int(smoking_yes)+2616.04*int(gender_male)+3017.46*int(gender_female)),2)
 
     return render_template("index.html", age=age, bmi=bmi, children=children, smoking=smoking,gender=gender,insurance=insurance)
 
