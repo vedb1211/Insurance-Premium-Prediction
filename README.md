@@ -8,7 +8,7 @@ Welcome to the **Insurance Premium Predictor** project! This repository hosts an
 
 ## :rocket: Project Overview
 
-In our intricate world, insurance plays a pivotal role in risk mitigation and financial security. One crucial aspect is the determination of **insurance premiums**. These premiums depend on diverse factors such as age, gender, location, medical history, and more. Our project leverages the power of machine learning to predict insurance premiums with greater accuracy and efficiency.
+In our intricate world, insurance plays a pivotal role in risk mitigation and financial security. One crucial aspect is the determination of **insurance premiums**. These premiums depend on diverse factors such as age, gender, BMI, smoking history, no. of children and more. Our project leverages the power of machine learning to predict insurance premiums with greater accuracy and efficiency.
 
 ## :gear: How It Works
 
@@ -22,11 +22,8 @@ The Insurance Premium Predictor project is built on a robust foundation of **dat
 
 4. **Model Selection**: We've explored various Linear Regression using OLS and find out the best model within OLS.
 
-5. **Training and Tuning**: Our chosen model is trained on a subset of data and fine-tuned using cross-validation and hyperparameter optimization.
+5. **Training and Tuning**: Our chosen model is trained on a subset of data and fine-tuned using cross-validation.
 
-6. **Prediction**: Input potential policyholder attributes, and the model predicts their insurance premium.
-
-7. **Visualization**: Interactive visuals shed light on attribute relationships and their impact on premiums.
 
 ## :file_folder: Repository Structure
 
